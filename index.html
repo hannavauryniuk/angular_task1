@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
-<body>
-<div ng-controller="firstController">
-
-    <button ng-click="toLowerCase()"> to lower case </button><br>
-    <button ng-click="toUpperCase()"> to upper case </button><br>
-    <button ng-click="reverse()"> reverse </button><br>
-    <button ng-click="toNewLine()"> to new line </button><br>
-    <button ng-click="getSubstring()"> get substring </button><br>
-    <span>number of symbols</span><input type="number" ng-model="number"><br>
-
-    <textarea ng-model="input" rows="35" cols="80"></textarea>
-    <textarea ng-model="output" rows="35" cols="80"></textarea>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body class="container-fluid">
+<div class="row" ng-controller="firstController">
+    <div class="col-sm-2">
+        <button class="btn btn-primary btn-block" ng-click="toLowerCase()"> to lower case </button><br>
+        <button class="btn btn-primary btn-block" ng-click="toUpperCase()"> to upper case </button><br>
+        <button class="btn btn-primary btn-block" ng-click="reverse()"> reverse </button><br>
+        <button class="btn btn-primary btn-block" ng-click="toNewLine()"> to new line </button><br>
+        <button class="btn btn-primary btn-block" ng-click="getSubstring()"> get substring </button><br>
+        <div class="input-group">
+            <span class="input-group-addon">number of symbols</span><input class="form-control" type="number" ng-model="number"><br></div>
+    </div>
+    <div class="col-sm-5"><textarea class="form-control" ng-model="input" rows="15"></textarea></div>
+    <div class="col-sm-5"><textarea class="form-control" ng-model="output" rows="15"></textarea></div>
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
